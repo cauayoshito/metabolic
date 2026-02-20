@@ -1,12 +1,13 @@
-﻿window.METABOLIC_CONFIG = {
+window.METABOLIC_CONFIG = {
   checkouts: {
-    manual: "COLE_AQUI_URL_GREEN_11_97",
-    upsell: "COLE_AQUI_URL_GREEN_27",
-    downsell: "COLE_AQUI_URL_GREEN_17"
+    manual: "https://google.com",
+    upsell: "https://google.com",
+    downsell: "https://google.com"
   },
   delivery: {
-    manualPdfUrl: "COLE_AQUI_URL_DO_PDF"
+    manualPdfUrl: "#"
+  },
+  support: {
+    whatsappUrl: "#"
   }
 };
-
-window.FUNIL_CONFIG = window.METABOLIC_CONFIG;
