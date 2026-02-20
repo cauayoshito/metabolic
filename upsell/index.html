@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Upsell: Training Planilha Premium</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ecb6",
+              "background-light": "#f6f8f8", // Not used in this specific dark design but required by prompt rules
+              "background-dark": "#0A0A0B",
+              "surface-dark": "#121214",
+              "surface-highlight": "#1C1C1E",
+            },
+            fontFamily: {
+              display: ["Lexend", "sans-serif"],
+              sans: ["Lexend", "sans-serif"],
+            },
+            boxShadow: {
+              neon: "0 0 20px rgba(19, 236, 182, 0.4)",
+              "neon-sm": "0 0 10px rgba(19, 236, 182, 0.2)",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+      }
+
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .text-glow {
+        text-shadow: 0 0 10px rgba(19, 236, 182, 0.3);
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100 flex flex-col items-center selection:bg-primary selection:text-background-dark"
+  >
+    <!-- Mobile-first Container Centered on Desktop -->
+    <main
+      class="w-full max-w-[520px] mx-auto min-h-screen flex flex-col relative overflow-hidden bg-background-light dark:bg-background-dark shadow-2xl"
+    >
+      <!-- Abstract Background Glows -->
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/10 blur-[120px] rounded-full pointer-events-none z-0"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/5 blur-[80px] rounded-full pointer-events-none z-0"
+      ></div>
+
+      <!-- Content Wrapper -->
+      <div
+        class="relative z-10 flex flex-col flex-grow px-6 py-8 sm:px-8 sm:py-12 gap-10"
+      >
+        <!-- Hero Section -->
+        <header class="flex flex-col gap-4 text-center">
+          <div
+            class="inline-flex mx-auto items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-2 border border-primary/20"
+          >
+            <span class="material-symbols-outlined text-primary text-2xl"
+              >fitness_center</span
+            >
+          </div>
+
+          <h1
+            class="text-3xl sm:text-4xl font-black leading-tight tracking-tight text-white"
+          >
+            Você já começou.<br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400"
+              >Não pare na metade.</span
+            >
+          </h1>
+
+          <p
+            class="text-slate-400 text-base sm:text-lg font-light leading-relaxed max-w-[400px] mx-auto"
+          >
+            O manual te dá a direção.
+            <span class="text-primary font-medium"
+              >A planilha te dá o passo a passo.</span
+            >
+          </p>
+        </header>
+
+        <!-- Features List (Neon Checkmarks) -->
+        <section
+          class="flex flex-col gap-4 bg-surface-dark/50 border border-white/5 rounded-2xl p-6 backdrop-blur-sm"
+        >
+          <h2
+            class="text-sm font-bold uppercase tracking-widest text-slate-500 mb-2"
+          >
+            O que você recebe:
+          </h2>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="material-symbols-outlined text-primary mt-0.5 shrink-0"
+              style="font-variation-settings: 'FILL' 1"
+              >check_circle</span
+            >
+            <div class="flex flex-col">
+              <span class="font-medium text-white"
+                >Treino iniciante 3x semana</span
+              >
+              <span class="text-xs text-slate-500"
+                >Ideal para quem está começando agora</span
+              >
+            </div>
+          </div>
+
+          <div class="h-px bg-white/5 w-full"></div>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="material-symbols-outlined text-primary mt-0.5 shrink-0"
+              style="font-variation-settings: 'FILL' 1"
+              >check_circle</span
+            >
+            <div class="flex flex-col">
+              <span class="font-medium text-white">Progressão simples</span>
+              <span class="text-xs text-slate-500"
+                >Aumente a carga com segurança</span
+              >
+            </div>
+          </div>
+
+          <div class="h-px bg-white/5 w-full"></div>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="material-symbols-outlined text-primary mt-0.5 shrink-0"
+              style="font-variation-settings: 'FILL' 1"
+              >check_circle</span
+            >
+            <div class="flex flex-col">
+              <span class="font-medium text-white"
+                >Campo de acompanhamento semanal</span
+              >
+              <span class="text-xs text-slate-500">Visualize sua evolução</span>
+            </div>
+          </div>
+
+          <div class="h-px bg-white/5 w-full"></div>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="material-symbols-outlined text-primary mt-0.5 shrink-0"
+              style="font-variation-settings: 'FILL' 1"
+              >check_circle</span
+            >
+            <div class="flex flex-col">
+              <span class="font-medium text-white"
+                >Modelo pra celular/print</span
+              >
+              <span class="text-xs text-slate-500"
+                >Leve seu treino para qualquer lugar</span
+              >
+            </div>
+          </div>
+
+          <div class="h-px bg-white/5 w-full"></div>
+
+          <div class="flex items-start gap-4">
+            <span
+              class="material-symbols-outlined text-primary mt-0.5 shrink-0"
+              style="font-variation-settings: 'FILL' 1"
+              >check_circle</span
+            >
+            <div class="flex flex-col">
+              <span class="font-medium text-white"
+                >Estruturado por profissionais</span
+              >
+              <span class="text-xs text-slate-500"
+                >Segurança e eficiência garantidas</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Authority Cards -->
+        <section class="grid grid-cols-2 gap-3">
+          <!-- Personal Trainer Card -->
+          <div
+            class="flex flex-col items-center text-center p-4 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/30 transition-colors"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-surface-highlight mb-3 overflow-hidden border-2 border-primary/20 relative"
+            >
+              <!-- Placeholder for Personal Trainer Image -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-slate-500"
+              >
+                <span class="material-symbols-outlined text-2xl">person</span>
+              </div>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Lucas M.</h3>
+            <p class="text-xs text-primary font-medium mb-1">
+              Personal Trainer
+            </p>
+            <p class="text-[10px] text-slate-500">CREF: 123456-G/SP</p>
+          </div>
+
+          <!-- Nutritionist Card -->
+          <div
+            class="flex flex-col items-center text-center p-4 rounded-xl bg-surface-dark border border-white/5 hover:border-primary/30 transition-colors"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-surface-highlight mb-3 overflow-hidden border-2 border-primary/20 relative"
+            >
+              <!-- Placeholder for Nutritionist Image -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-slate-500"
+              >
+                <span class="material-symbols-outlined text-2xl"
+                  >person_outline</span
+                >
+              </div>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-1">Ana P.</h3>
+            <p class="text-xs text-primary font-medium mb-1">Nutricionista</p>
+            <p class="text-[10px] text-slate-500">CRN: 98765-P</p>
+          </div>
+        </section>
+
+        <!-- Pricing & Offer Section -->
+        <section
+          class="bg-gradient-to-b from-surface-dark to-black border border-white/5 rounded-2xl p-6 text-center shadow-lg relative overflow-hidden group"
+        >
+          <!-- Decorative glow inside card -->
+          <div
+            class="absolute -top-10 left-1/2 -translate-x-1/2 w-40 h-40 bg-primary/10 blur-[50px] rounded-full pointer-events-none"
+          ></div>
+
+          <div class="relative z-10 flex flex-col gap-4">
+            <div
+              class="inline-block mx-auto bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase border border-primary/20"
+            >
+              Oferta Especial
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-1">
+              <span class="text-slate-500 text-lg line-through font-medium"
+                >de R$ 67,00</span
+              >
+              <div class="flex items-baseline gap-1">
+                <span class="text-2xl font-medium text-white">por</span>
+                <span
+                  class="text-5xl font-black text-primary text-glow tracking-tighter"
+                  >R$ 27</span
+                >
+              </div>
+              <span class="text-xs text-slate-400"
+                >Pagamento único. Acesso vitalício.</span
+              >
+            </div>
+
+            <div class="w-full h-px bg-white/10 my-2"></div>
+
+            <!-- Primary CTA -->
+            <button
+              class="w-full group/btn relative overflow-hidden rounded-xl bg-primary hover:bg-[#0fdba8] text-background-dark font-black text-lg py-4 px-6 shadow-neon transition-all hover:scale-[1.02] active:scale-[0.98]"
+              id="upsell-cta"
+            >
+              <span
+                class="relative z-10 flex items-center justify-center gap-2"
+              >
+                SIM, QUERO APLICAR AGORA
+                <span class="material-symbols-outlined font-bold"
+                  >arrow_forward</span
+                >
+              </span>
+            </button>
+
+            <!-- Guarantee badges -->
+            <div
+              class="flex justify-center gap-4 text-[11px] text-slate-400 font-medium"
+            >
+              <div class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-primary text-sm"
+                  >lock</span
+                >
+                Pagamento Seguro
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="material-symbols-outlined text-primary text-sm"
+                  >verified</span
+                >
+                7 Dias de Garantia
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Secondary Action -->
+        <div class="text-center pb-8">
+          <button
+            class="text-slate-500 hover:text-slate-300 text-sm font-normal underline decoration-slate-700 underline-offset-4 transition-colors"
+            id="manual-cta"
+          >
+            Não, prefiro tentar montar meu treino sozinho
+          </button>
+        </div>
+
+        <!-- Footer Disclaimer -->
+        <footer class="mt-auto border-t border-white/5 pt-6 text-center">
+          <p
+            class="text-[10px] leading-relaxed text-slate-600 max-w-xs mx-auto"
+          >
+            Este produto não substitui o parecer médico profissional. Sempre
+            consulte um médico para tratar de assuntos relativos à saúde. Os
+            resultados podem variar de pessoa para pessoa.
+            <br /><br />
+            © 2023 Training Planilha. Todos os direitos reservados.
+          </p>
+        </footer>
+      </div>
+    </main>
+
+    <script src="../assets/config.js"></script>
+    <script>
+      (function () {
+        var config = window.METABOLIC_CONFIG || window.FUNIL_CONFIG;
+
+        var upsellButton = document.getElementById("upsell-cta");
+        var manualLink = document.getElementById("manual-cta");
+
+        if (upsellButton) {
+          upsellButton.addEventListener("click", function () {
+            var checkout =
+              config &&
+              config.checkouts &&
+              (config.checkouts.upsell || config.checkouts.upsell27);
+            if (!checkout) {
+              alert(
+                "Configure o checkout do upsell (R$ 27) em /assets/config.js"
+              );
+              return;
+            }
+            window.location.href = checkout;
+          });
+        }
+
+        if (manualLink) {
+          manualLink.addEventListener("click", function () {
+            var checkout =
+              config &&
+              config.checkouts &&
+              (config.checkouts.manual || config.checkouts.manual1197);
+            if (!checkout) {
+              alert(
+                "Configure o checkout do manual (R$ 11,97) em /assets/config.js"
+              );
+              return;
+            }
+            window.location.href = checkout;
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

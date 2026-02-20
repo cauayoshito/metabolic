@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Acesso Confirmado - Metabolic Edu</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ecb6",
+              "background-light": "#f6f8f8",
+              "background-dark": "#0A0A0B",
+              "surface-dark": "#18181b",
+            },
+            fontFamily: {
+              display: ["Lexend", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .glass-panel {
+        background: rgba(24, 24, 27, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-slate-900 overflow-x-hidden"
+  >
+    <!-- Main Container -->
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-6 lg:p-8">
+      <!-- Centered Mobile-First Card -->
+      <div class="w-full max-w-[480px] flex flex-col gap-8">
+        <!-- Logo Area -->
+        <div class="flex justify-center mb-4">
+          <div class="flex items-center gap-3">
+            <div
+              class="flex items-center justify-center size-10 rounded-xl bg-primary/10 text-primary border border-primary/20"
+            >
+              <span class="material-symbols-outlined text-2xl"
+                >vital_signs</span
+              >
+            </div>
+            <span class="text-xl font-bold tracking-tight dark:text-white"
+              >Metabolic Edu</span
+            >
+          </div>
+        </div>
+
+        <!-- Success Hero -->
+        <div
+          class="glass-panel rounded-2xl p-8 flex flex-col items-center text-center shadow-2xl relative overflow-hidden group"
+        >
+          <!-- Decorative Glow -->
+          <div
+            class="absolute -top-24 -left-24 size-48 bg-primary/10 rounded-full blur-[64px] group-hover:bg-primary/20 transition-all duration-700"
+          ></div>
+          <div
+            class="absolute -bottom-24 -right-24 size-48 bg-primary/5 rounded-full blur-[64px]"
+          ></div>
+
+          <!-- Icon -->
+          <div class="relative mb-6">
+            <div
+              class="size-20 rounded-full bg-primary/10 flex items-center justify-center text-primary ring-1 ring-primary/30 animate-pulse"
+            >
+              <span class="material-symbols-outlined text-[40px] font-bold"
+                >check</span
+              >
+            </div>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl font-bold text-white mb-3">
+            Acesso confirmado.
+          </h1>
+
+          <p
+            class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-[320px]"
+          >
+            Verifique seu e-mail para instruções e download. O link de acesso
+            expira em 24h.
+          </p>
+
+          <!-- Order Details Pill -->
+          <div
+            class="mt-6 py-1.5 px-4 rounded-full bg-white/5 border border-white/10 flex items-center gap-2"
+          >
+            <span
+              class="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(19,236,182,0.6)]"
+            ></span>
+            <span
+              class="text-xs font-medium text-slate-300 tracking-wide uppercase"
+              >Pedido #83921</span
+            >
+          </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="bg-surface-dark border border-white/5 rounded-xl p-5 flex items-center gap-4 transition-colors hover:border-primary/30 group cursor-pointer"
+            onclick="downloadNow()"
+          >
+            <div
+              class="size-12 rounded-lg bg-[#23483f] flex items-center justify-center shrink-0 text-primary"
+            >
+              <span class="material-symbols-outlined">description</span>
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <h3
+                class="text-white font-semibold text-sm truncate group-hover:text-primary transition-colors"
+              >
+                Guia Metabólico Completo
+              </h3>
+              <p class="text-slate-500 text-xs">PDF • Download</p>
+            </div>
+
+            <button
+              class="size-8 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white transition-colors"
+              type="button"
+              aria-label="Ir para download"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+
+          <!-- Primary CTA -->
+          <button
+            class="w-full h-14 bg-primary hover:bg-[#0fd6a3] active:scale-[0.98] transition-all rounded-xl flex items-center justify-center gap-2 shadow-[0_4px_24px_-4px_rgba(19,236,182,0.3)] group"
+            onclick="downloadNow()"
+          >
+            <span class="text-slate-900 font-bold text-base"
+              >Baixar conteúdo agora</span
+            >
+            <span
+              class="material-symbols-outlined text-slate-900 group-hover:translate-y-0.5 transition-transform"
+              >download</span
+            >
+          </button>
+
+          <p class="text-center text-xs text-slate-500">
+            Problemas com o download? Tente usar outro navegador.
+          </p>
+        </div>
+
+        <!-- Support Section -->
+        <div class="mt-4 border-t border-white/10 pt-8">
+          <div class="flex flex-col items-center gap-4">
+            <p class="text-sm font-medium text-slate-400">
+              Precisa de ajuda com seu pedido?
+            </p>
+
+            <a
+              class="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 hover:border-primary/30 transition-all group w-full justify-center sm:w-auto"
+              href="javascript:void(0)"
+              onclick="supportNow()"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-xl group-hover:scale-110 transition-transform"
+                >support_agent</span
+              >
+              <span class="text-sm font-semibold text-slate-200"
+                >Falar com Suporte</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Disclaimer -->
+    <footer class="w-full py-8 px-6 border-t border-white/5 bg-background-dark">
+      <div class="max-w-[480px] mx-auto text-center space-y-4">
+        <p
+          class="text-[10px] leading-relaxed text-slate-600 uppercase tracking-wider font-semibold"
+        >
+          Isenção de responsabilidade
+        </p>
+
+        <p class="text-[11px] leading-relaxed text-slate-500">
+          Este material é apenas para fins educativos e informativos. Não
+          substitui o aconselhamento médico profissional, diagnóstico ou
+          tratamento. Sempre procure o conselho de seu médico ou outro
+          profissional de saúde qualificado.
+        </p>
+
+        <div class="flex justify-center gap-6 pt-2">
+          <a
+            class="text-[11px] text-slate-600 hover:text-primary transition-colors"
+            href="#"
+            >Termos</a
+          >
+          <a
+            class="text-[11px] text-slate-600 hover:text-primary transition-colors"
+            href="#"
+            >Privacidade</a
+          >
+        </div>
+
+        <p class="text-[10px] text-slate-700 mt-4">
+          © 2023 Metabolic Edu. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../assets/config.js"></script>
+    <script>
+      function downloadNow() {
+        if (
+          !window.METABOLIC_CONFIG ||
+          !window.METABOLIC_CONFIG.delivery ||
+          !window.METABOLIC_CONFIG.delivery.manualPdfUrl
+        ) {
+          alert("Configure o link do PDF em /assets/config.js");
+          return;
+        }
+        window.open(window.METABOLIC_CONFIG.delivery.manualPdfUrl, "_blank");
+      }
+
+      function supportNow() {
+        if (
+          window.METABOLIC_CONFIG &&
+          window.METABOLIC_CONFIG.support &&
+          window.METABOLIC_CONFIG.support.whatsappUrl
+        ) {
+          window.open(window.METABOLIC_CONFIG.support.whatsappUrl, "_blank");
+          return;
+        }
+        alert("Canal de suporte não configurado.");
+      }
+    </script>
+  </body>
+</html>
