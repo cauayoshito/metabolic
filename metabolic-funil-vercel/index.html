@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="refresh" content="0; url=/upsell/" />
+    <title>Manual Metabólico - Preservação Muscular</title>
+
+    <script>
+      window.location.replace("/upsell/");
+    </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ecb6",
+              "primary-dark": "#0ea680",
+              "background-light": "#f6f8f8",
+              "background-dark": "#0A0A0B",
+              "surface-dark": "#121214",
+              "surface-border": "#27272a",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+              body: ["Noto Sans", "sans-serif"],
+            },
+            backgroundImage: {
+              "grid-pattern":
+                "linear-gradient(to right, #27272a 1px, transparent 1px), linear-gradient(to bottom, #27272a 1px, transparent 1px)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .neon-glow {
+        box-shadow: 0 0 15px rgba(19, 236, 182, 0.3);
+        transition: box-shadow 0.3s ease;
+      }
+      .neon-glow:hover {
+        box-shadow: 0 0 25px rgba(19, 236, 182, 0.5);
+      }
+      .bg-grid {
+        background-size: 40px 40px;
+        mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          10%,
+          black,
+          90%,
+          transparent
+        );
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          transparent,
+          10%,
+          black,
+          90%,
+          transparent
+        );
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden"
+  >
+    <!-- CONFIG: edite em /assets/config.js -->
+    <script src="/assets/config.js"></script>
+
+    <nav
+      class="fixed top-0 w-full z-50 border-b border-surface-border bg-background-dark/80 backdrop-blur-md"
+    >
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-3xl"
+              >bolt</span
+            >
+            <span class="font-bold text-lg tracking-tight text-white uppercase"
+              >Metabolic Manual</span
+            >
+          </div>
+
+          <a
+            class="hidden sm:flex items-center justify-center px-4 py-2 text-sm font-bold text-background-dark bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+            href="javascript:void(0)"
+            onclick="goManual('nav')"
+          >
+            BAIXAR AGORA
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="relative flex flex-col items-center w-full pt-16">
+      <section
+        class="relative w-full max-w-3xl px-4 py-12 sm:py-20 flex flex-col gap-8 items-center text-center"
+      >
+        <div
+          class="absolute inset-0 z-0 bg-grid-pattern opacity-[0.07] bg-grid pointer-events-none"
+        ></div>
+
+        <div class="relative z-10 flex flex-col gap-6 items-center">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider"
+          >
+            <span class="material-symbols-outlined text-base">verified</span>
+            Versão 2.0 Disponível
+          </div>
+
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white uppercase"
+          >
+            Já começou a
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500"
+              >emagrecer?</span
+            >
+            <br />
+            <span class="text-primary">Não destrua seu músculo</span> no
+            processo.
+          </h1>
+
+          <p
+            class="text-lg sm:text-xl text-gray-400 max-w-xl font-normal leading-relaxed"
+          >
+            Manual rápido para preservar massa muscular, energia e estrutura
+            durante protocolos de emagrecimento intensivo.
+          </p>
+
+          <div class="flex flex-col w-full max-w-sm gap-3 mt-4">
+            <button
+              class="neon-glow flex items-center justify-center w-full h-14 px-6 text-background-dark bg-primary rounded-lg text-lg font-bold uppercase tracking-wide hover:scale-[1.02] active:scale-[0.98] transition-transform"
+              onclick="goManual('hero')"
+            >
+              Baixar por R$ 11,97
+            </button>
+
+            <div
+              class="flex items-center justify-center gap-2 text-xs text-gray-500"
+            >
+              <span class="material-symbols-outlined text-sm">lock</span>
+              Pagamento único &amp; seguro
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="w-full max-w-3xl px-4 py-12 border-y border-surface-border bg-surface-dark/50"
+      >
+        <div class="flex flex-col gap-8">
+          <div class="text-center">
+            <h2
+              class="text-xl sm:text-2xl font-bold uppercase text-white tracking-tight"
+            >
+              <span class="text-red-500 mr-2">⚠️</span> Sem estratégia, a perda
+              de peso pode significar:
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div
+              class="group flex flex-col gap-3 p-5 rounded-xl bg-background-dark border border-surface-border hover:border-red-500/30 transition-colors"
+            >
+              <div class="p-2 w-fit rounded-lg bg-red-500/10 text-red-500">
+                <span class="material-symbols-outlined">exercise</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-lg">Perda de Músculo</h3>
+                <p class="text-sm text-gray-400 mt-1">
+                  O corpo canibaliza o tecido muscular para obter energia rápida
+                  se não houver proteção adequada.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col gap-3 p-5 rounded-xl bg-background-dark border border-surface-border hover:border-red-500/30 transition-colors"
+            >
+              <div class="p-2 w-fit rounded-lg bg-red-500/10 text-red-500">
+                <span class="material-symbols-outlined">battery_alert</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-lg">Fraqueza Constante</h3>
+                <p class="text-sm text-gray-400 mt-1">
+                  Queda brusca de glicogênio resultando em treinos ruins e falta
+                  de disposição diária.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col gap-3 p-5 rounded-xl bg-background-dark border border-surface-border hover:border-red-500/30 transition-colors"
+            >
+              <div class="p-2 w-fit rounded-lg bg-red-500/10 text-red-500">
+                <span class="material-symbols-outlined">trending_down</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-lg">Queda Metabólica</h3>
+                <p class="text-sm text-gray-400 mt-1">
+                  Seu corpo entra em "modo de sobrevivência", travando a queima
+                  de gordura.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col gap-3 p-5 rounded-xl bg-background-dark border border-surface-border hover:border-red-500/30 transition-colors"
+            >
+              <div class="p-2 w-fit rounded-lg bg-red-500/10 text-red-500">
+                <span class="material-symbols-outlined">history</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-lg">Efeito Rebote</h3>
+                <p class="text-sm text-gray-400 mt-1">
+                  Recuperação rápida de todo o peso perdido (e mais um pouco) ao
+                  voltar a comer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full max-w-3xl px-4 py-16 flex flex-col gap-10">
+        <div class="flex flex-col gap-4 text-center">
+          <span class="text-primary font-bold uppercase tracking-widest text-sm"
+            >A Solução Prática</span
+          >
+          <h2 class="text-3xl font-black text-white uppercase leading-tight">
+            O que está incluso no manual
+          </h2>
+          <p class="text-gray-400 max-w-lg mx-auto">
+            Direto ao ponto. Sem teorias complexas, apenas o que você precisa
+            aplicar hoje.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <div
+            class="flex items-center gap-4 p-4 rounded-lg bg-surface-dark border border-surface-border"
+          >
+            <div
+              class="flex-shrink-0 flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >restaurant_menu</span
+              >
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-lg"
+                >Guia Alimentar Simplificado</span
+              >
+              <span class="text-gray-400 text-sm"
+                >O que comer antes e depois do treino para segurar massa
+                magra.</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-4 p-4 rounded-lg bg-surface-dark border border-surface-border"
+          >
+            <div
+              class="flex-shrink-0 flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >fitness_center</span
+              >
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-lg"
+                >Estrutura Básica de Treino</span
+              >
+              <span class="text-gray-400 text-sm"
+                >Volume e intensidade ideais para déficit calórico.</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-4 p-4 rounded-lg bg-surface-dark border border-surface-border"
+          >
+            <div
+              class="flex-shrink-0 flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary"
+            >
+              <span class="material-symbols-outlined text-lg">shield</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-lg"
+                >Estratégia Anti-Rebote</span
+              >
+              <span class="text-gray-400 text-sm"
+                >Como sair da dieta sem ganhar gordura imediatamente.</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-4 p-4 rounded-lg bg-surface-dark border border-surface-border"
+          >
+            <div
+              class="flex-shrink-0 flex items-center justify-center size-8 rounded-full bg-primary/20 text-primary"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >check_circle</span
+              >
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-lg"
+                >Checklist Semanal</span
+              >
+              <span class="text-gray-400 text-sm"
+                >Metas claras para acompanhar seu progresso.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full border-t border-surface-border bg-surface-dark/30">
+        <div class="max-w-3xl mx-auto px-4 py-16 flex flex-col gap-10">
+          <div class="text-center">
+            <h2
+              class="text-2xl sm:text-3xl font-black text-white uppercase leading-tight"
+            >
+              Conteúdo estruturado com apoio técnico
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="bg-background-dark border border-surface-border rounded-xl p-6 flex flex-col items-center text-center gap-4 hover:border-primary/30 transition-colors"
+            >
+              <div
+                class="w-20 h-20 rounded-full bg-surface-dark border border-surface-border flex items-center justify-center overflow-hidden"
+              >
+                <span class="material-symbols-outlined text-gray-600 text-4xl"
+                  >person</span
+                >
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg">Dr. Nome Sobrenome</h3>
+                <p
+                  class="text-primary text-sm font-medium uppercase tracking-wider mb-2"
+                >
+                  Nutricionista (CRN)
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Especialista em nutrição esportiva e metabolismo energético
+                  com foco em performance.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-background-dark border border-surface-border rounded-xl p-6 flex flex-col items-center text-center gap-4 hover:border-primary/30 transition-colors"
+            >
+              <div
+                class="w-20 h-20 rounded-full bg-surface-dark border border-surface-border flex items-center justify-center overflow-hidden"
+              >
+                <span class="material-symbols-outlined text-gray-600 text-4xl"
+                  >person</span
+                >
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg">
+                  Prof. Nome Sobrenome
+                </h3>
+                <p
+                  class="text-primary text-sm font-medium uppercase tracking-wider mb-2"
+                >
+                  Personal Trainer (CREF)
+                </p>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Treinador focado em biomecânica aplicada e preservação de
+                  massa magra.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center border-t border-surface-border pt-8 mt-2">
+            <p class="text-gray-500 text-sm italic">
+              <span
+                class="material-symbols-outlined align-middle text-lg mr-1 text-primary"
+                >science</span
+              >
+              Material baseado em princípios de fisiologia, nutrição esportiva e
+              prática profissional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="w-full bg-surface-dark py-16 border-t border-surface-border"
+        id="offer"
+      >
+        <div
+          class="max-w-3xl mx-auto px-4 flex flex-col items-center text-center gap-8"
+        >
+          <div class="space-y-2">
+            <h2 class="text-2xl font-bold text-white uppercase">
+              Acesso Imediato ao Manual
+            </h2>
+            <p class="text-gray-400 text-sm">
+              Comece a aplicar as estratégias em menos de 2 minutos.
+            </p>
+          </div>
+
+          <div class="relative group">
+            <div
+              class="absolute -inset-1 bg-primary rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-200"
+            ></div>
+
+            <div
+              class="relative bg-background-dark border border-surface-border p-8 sm:p-10 rounded-xl flex flex-col items-center gap-6 w-full max-w-sm"
+            >
+              <div class="flex flex-col items-center">
+                <span class="text-gray-500 line-through text-lg">R$ 47,90</span>
+                <div class="flex items-start">
+                  <span class="text-2xl font-bold text-primary mt-2">R$</span>
+                  <span
+                    class="text-6xl sm:text-7xl font-black text-white tracking-tighter"
+                    >11,97</span
+                  >
+                </div>
+                <span
+                  class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded mt-2 uppercase"
+                  >Oferta por tempo limitado</span
+                >
+              </div>
+
+              <ul class="text-left w-full space-y-2 text-sm text-gray-300">
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check</span
+                  >
+                  Acesso Vitalício
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check</span
+                  >
+                  Download em PDF
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary text-base"
+                    >check</span
+                  >
+                  Leitura em qualquer dispositivo
+                </li>
+              </ul>
+
+              <button
+                class="w-full neon-glow h-14 bg-primary text-background-dark rounded-lg text-lg font-bold uppercase tracking-wide hover:scale-[1.02] transition-transform"
+                onclick="goManual('offer')"
+              >
+                Quero Acesso Imediato
+              </button>
+
+              <div class="flex items-center gap-2 text-xs text-gray-500">
+                <img
+                  class="h-6 opacity-50 grayscale hover:grayscale-0 transition-all"
+                  alt="Logos de cartões de crédito e Pix"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlc4X6dCyxOY9QlUFK1zVid1jSdRcGGfdNlMCGuKzTAnyw2CQs70otiNqPoKzV9uEjHufyq-YWQmXAG9KdHak3mrMwIZz3d9wRNY3nCxr05SgtS71y8qGCBb-h1jRnTp_9WDK6z0jS4-avTNC1tycdD4PS0S0Gq1A07CETqtZbNCY1TtE66TJTw4cAvOmTkqPlWEtoznJIbhKF9-S9lPMGA-G5Ytw8chBs96rXTv0yj1dbZ0FtIE7D0zAFgU4_hEa_f73dktc1sEJe"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 p-4 bg-background-dark/50 rounded-lg border border-surface-border max-w-md"
+          >
+            <span class="material-symbols-outlined text-primary text-3xl"
+              >verified_user</span
+            >
+            <div class="text-left">
+              <h4 class="text-white font-bold text-sm">
+                7 Dias de Garantia Incondicional
+              </h4>
+              <p class="text-xs text-gray-500">
+                Se não gostar do conteúdo, devolvemos 100% do seu dinheiro. Sem
+                perguntas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="w-full bg-background-dark py-12 border-t border-surface-border/50"
+      >
+        <div
+          class="max-w-3xl mx-auto px-4 flex flex-col gap-8 text-center sm:text-left"
+        >
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4"
+          >
+            <div class="flex items-center gap-2 opacity-50">
+              <span class="material-symbols-outlined text-white">bolt</span>
+              <span class="font-bold text-white uppercase tracking-tight"
+                >Metabolic Manual</span
+              >
+            </div>
+            <p class="text-xs text-gray-600">
+              © 2024 Metabolic Manual. Todos os direitos reservados.
+            </p>
+          </div>
+
+          <div class="border-t border-surface-border pt-8">
+            <p class="text-[10px] text-gray-600 leading-relaxed text-justify">
+              <strong>Isenção de responsabilidade:</strong> Este produto não
+              substitui o parecer médico profissional. Sempre consulte um médico
+              para tratar de assuntos relativos à saúde. Os resultados podem
+              variar de pessoa para pessoa. O conteúdo deste manual tem caráter
+              puramente educativo e informativo. Ao adquirir este produto, você
+              aceita que o autor e a editora não são responsáveis pelo sucesso
+              ou fracasso de suas decisões relacionadas a qualquer informação
+              apresentada.
+            </p>
+
+            <div
+              class="flex justify-center gap-4 mt-6 text-[10px] text-gray-500"
+            >
+              <a class="hover:text-primary transition-colors" href="#"
+                >Termos de Uso</a
+              >
+              <a class="hover:text-primary transition-colors" href="#"
+                >Política de Privacidade</a
+              >
+              <a class="hover:text-primary transition-colors" href="#"
+                >Contato</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- FUNIL -->
+    <script>
+      function goManual(pos) {
+        if (
+          !window.FUNIL_CONFIG ||
+          !FUNIL_CONFIG.checkouts ||
+          !FUNIL_CONFIG.checkouts.manual
+        ) {
+          alert("Configure o link do checkout do Manual em /assets/config.js");
+          return;
+        }
+        const url = new URL(FUNIL_CONFIG.checkouts.manual);
+        url.searchParams.set("src", "manual");
+        if (pos) url.searchParams.set("pos", pos);
+        window.location.href = url.toString();
+      }
+    </script>
+  </body>
+</html>
