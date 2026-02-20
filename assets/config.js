@@ -5,7 +5,7 @@ window.METABOLIC_CONFIG = {
     downsell: "https://payfast.greenn.com.br/feexqjv"
   },
   delivery: {
-    manualPdfUrl: "COLE_AQUI_URL_DO_PDF"
+    manualPdfUrl: "/assets/pdf/manual-metabolico.pdf"
   }
 };
 
