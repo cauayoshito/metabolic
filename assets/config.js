@@ -1,8 +1,8 @@
 window.METABOLIC_CONFIG = {
   checkouts: {
-    manual: "COLE_AQUI_URL_GREEN_11_97",
-    upsell: "COLE_AQUI_URL_GREEN_27",
-    downsell: "COLE_AQUI_URL_GREEN_17"
+    manual: "https://payfast.greenn.com.br/rrztw2n",
+    upsell: "https://payfast.greenn.com.br/3ys2zyn",
+    downsell: "https://payfast.greenn.com.br/feexqjv"
   },
   delivery: {
     manualPdfUrl: "COLE_AQUI_URL_DO_PDF"
